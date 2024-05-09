@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="inputs">
+      <input type="text" id="id" />
+      <input type="text" id="title" />
+      <input type="text" id="desc" />
+      <input type="date" id="date" />
+      <button onclick="readInput()">Add Task</button>
+    </div>
+
+    <div class="">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Desc</th>
+            <th>Date</th>
+            <th>Operations</th>
+          </tr>
+        </thead>
+        <tbody id="items">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="javascript/index.js"></script>
+  </body>
+</html>
