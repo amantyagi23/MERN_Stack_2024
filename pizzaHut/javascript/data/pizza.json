@@ -1,0 +1,29 @@
+{
+    "pizzas": [
+      {
+        "name": "Margherita",
+        "description": "Classic cheese and tomato base topped with mozzarella cheese and basil leaves.",
+        "price": "$10.99",
+        "image_url": "https://example.com/margherita.jpg"
+      },
+      {
+        "name": "Pepperoni",
+        "description": "Traditional favorite with pepperoni slices, mozzarella cheese, and tomato sauce.",
+        "price": "$12.99",
+        "image_url": "https://example.com/pepperoni.jpg"
+      },
+      {
+        "name": "Supreme",
+        "description": "Loaded with pepperoni, Italian sausage, green bell peppers, onions, black olives, and mushrooms.",
+        "price": "$14.99",
+        "image_url": "https://example.com/supreme.jpg"
+      },
+      {
+        "name": "BBQ Chicken",
+        "description": "Grilled chicken, barbecue sauce, red onions, and cilantro on a cheesy base.",
+        "price": "$13.99",
+        "image_url": "https://example.com/bbq_chicken.jpg"
+      }
+    ]
+  }
+  
