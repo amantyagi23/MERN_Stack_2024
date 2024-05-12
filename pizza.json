@@ -4,25 +4,25 @@
       "name": "Margherita",
       "description": "Classic cheese and tomato base topped with mozzarella cheese and basil leaves.",
       "price": "$10.99",
-      "image_url": "https://example.com/margherita.jpg"
+      "image_url": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/bold-bbq-veggies.8cd7bdc4b90ad70c7acfbfdf86a812a1.1.jpg?width=251"
     },
     {
       "name": "Pepperoni",
       "description": "Traditional favorite with pepperoni slices, mozzarella cheese, and tomato sauce.",
       "price": "$12.99",
-      "image_url": "https://example.com/pepperoni.jpg"
+      "image_url": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/margherita.90f9451fd66871fb6f9cf7d506053f18.1.jpg?width=251"
     },
     {
       "name": "Supreme",
       "description": "Loaded with pepperoni, Italian sausage, green bell peppers, onions, black olives, and mushrooms.",
       "price": "$14.99",
-      "image_url": "https://example.com/supreme.jpg"
+      "image_url": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/ultimate-tandoori-veggie.059dfd9b3f088818ed725872d98d20b6.1.jpg?width=251"
     },
     {
       "name": "BBQ Chicken",
       "description": "Grilled chicken, barbecue sauce, red onions, and cilantro on a cheesy base.",
       "price": "$13.99",
-      "image_url": "https://example.com/bbq_chicken.jpg"
+      "image_url": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/nawabi-murg-makhni.0c32181021b6b11acdde8bbb8887248b.1.jpg?width=251"
     }
   ]
 }
