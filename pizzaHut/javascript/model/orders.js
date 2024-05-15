@@ -1,12 +1,9 @@
-// class Orders{
-//     total
-//     pizzaList
-//     constructor(params) {
-        
-//     }
-//     addPizza
-//     update{
+class Order{
 
-//     }
-//     delete
-// }
+    constructor(userId,pizzaId,username,totalBill){
+        this.userId = userId,
+        this.pizzaId = pizzaId,
+        this.username = username,
+        this.totalBill = totalBill
+    }
+}
