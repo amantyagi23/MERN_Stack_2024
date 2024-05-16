@@ -20,6 +20,11 @@ const PIZZASERVICE = {
     return this.pizzaList;
    },
 
+   serachPizza(pizzaId){
+    console.log(pizzaId);
+    return this.pizzaList.find(pizza =>pizza.id===parseInt(pizzaId))
+   }
+
    
 
 }

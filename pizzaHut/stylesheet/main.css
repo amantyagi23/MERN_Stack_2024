@@ -16,10 +16,12 @@ img {
 #pizzaList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: left;
   align-items: center;
   margin: 10px 20px;
   flex-direction: row;
+  gap: 10px;
+  /* background-color: black; */
 }
 
 .card {
@@ -33,4 +35,16 @@ img {
 .cardBody {
   text-align: center;
   width: 100%;
+}
+
+#orders {
+  width: 50%;
+  font-size: larger;
+  margin: 0 auto;
+  background-color: rgb(133, 133, 133);
+}
+
+.gridBox {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
 }

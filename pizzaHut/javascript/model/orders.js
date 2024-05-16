@@ -1,4 +1,4 @@
-class Order{
+export class Order{
 
     constructor(userId,pizzaId,username,totalBill){
         this.userId = userId,

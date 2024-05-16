@@ -8,8 +8,33 @@
     <link rel="stylesheet" href="stylesheet/main.css" />
   </head>
   <body>
+    <header>
+      <div class="logo"></div>
+      <div class="">
+        <a href="./login.html">Login</a>
+        <a href="">Sign In</a>
+      </div>
+    </header>
     <main>
-      <div id="pizzaList"></div>
+      <!-- <div id="pizzaList"></div> -->
+      <div class="gridBox">
+        <div class="">
+          <h1>Pizzas</h1>
+          <div id="pizzaList"></div>
+        </div>
+        <div class="">
+          <h1>Orders</h1>
+
+          <div id="orderList">
+            <div class="pizza Name"></div>
+            <div class="pizza price"></div>
+            <div class="pizza count"></div>
+          </div>
+          <div id="orderCount"></div>
+          <div id="totalBill"></div>
+          <button>Place Order</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>

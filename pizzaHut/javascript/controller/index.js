@@ -1,4 +1,5 @@
 
+import ORDERSERVICES from "../services/ordersService.js";
 import PIZZASERVICE from "../services/pizzaService.js"
 
 window.addEventListener("DOMContentLoaded",bindEvents);
@@ -72,8 +73,18 @@ function printdata(pizzas){
 function addToCart(){
   const value = this.getAttribute("pizzaId");
   console.log(value);
+  ORDERSERVICES.addToCart(value);
   // alert("yess")
+  printOrders();
 }
 
+function printOrders(){
 
+
+   document.getElementById("orderCount").innerText = ORDERSERVICES.getTotalOrders();
+   console.log(ORDERSERVICES.getTotalBill());
+   document.getElementById("totalBill").innerText = ORDERSERVICES.getTotalBill();
+
+
+}
 
