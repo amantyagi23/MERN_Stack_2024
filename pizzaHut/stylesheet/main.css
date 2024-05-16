@@ -7,10 +7,30 @@
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+header {
+  background-color: rgb(152, 152, 152);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  font-size: larger;
 }
 
 img {
   width: 100%;
+}
+
+main {
+  width: 95%;
+  margin: 0 auto;
 }
 
 #pizzaList {
@@ -30,6 +50,7 @@ img {
   border: 1px solid black;
   box-shadow: 0px 2px 30px rgb(146, 146, 146);
   overflow: hidden;
+  text-align: center;
 }
 
 .cardBody {
@@ -47,4 +68,35 @@ img {
 .gridBox {
   display: grid;
   grid-template-columns: 2fr 1fr;
+}
+
+.box {
+  border: 1px solid gray;
+  margin: 10px 1px;
+  padding: 0 10px;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: larger;
+  background-color: rgb(123, 123, 123);
+  box-shadow: 2px 3px 2px rgb(81, 76, 76);
+  margin: 15px auto;
+}
+
+button {
+  text-align: center;
+  font-size: larger;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid snow;
+  background-color: rgb(57, 125, 185);
+  border-radius: 12px;
+}
+
+button:hover {
+  transform: scale(1.111);
+  transition: 1.2s;
 }

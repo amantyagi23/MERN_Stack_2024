@@ -1,9 +1,9 @@
 export class Order{
 
-    constructor(userId,pizzaId,username,totalBill){
+    constructor(userId,pizzaId,username,count){
         this.userId = userId,
         this.pizzaId = pizzaId,
         this.username = username,
-        this.totalBill = totalBill
+        this.count = count
     }
 }

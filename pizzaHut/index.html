@@ -9,7 +9,12 @@
   </head>
   <body>
     <header>
-      <div class="logo"></div>
+      <div class="logo">
+        <img
+          src="https://www.pizzahut.co.in/_next/static/static/images/logo.38f9109e24d22d58d048837b27f54390.png"
+          alt=""
+        />
+      </div>
       <div class="">
         <a href="./login.html">Login</a>
         <a href="">Sign In</a>
@@ -18,17 +23,31 @@
     <main>
       <!-- <div id="pizzaList"></div> -->
       <div class="gridBox">
-        <div class="">
+        <div class="box">
           <h1>Pizzas</h1>
           <div id="pizzaList"></div>
         </div>
-        <div class="">
+        <div class="box">
           <h1>Orders</h1>
 
           <div id="orderList">
-            <div class="pizza Name"></div>
-            <div class="pizza price"></div>
-            <div class="pizza count"></div>
+            <ul>
+              <li>
+                <div class="pizza Name">Pepperoni</div>
+                <div class="pizza price">$12.99</div>
+                <div class="pizza count">2</div>
+              </li>
+              <li>
+                <div class="pizza Name">Margherita</div>
+                <div class="pizza price">$10.99</div>
+                <div class="pizza count">1</div>
+              </li>
+              <li>
+                <div class="pizza Name">Supreme</div>
+                <div class="pizza price">$14.99</div>
+                <div class="pizza count">3</div>
+              </li>
+            </ul>
           </div>
           <div id="orderCount"></div>
           <div id="totalBill"></div>
