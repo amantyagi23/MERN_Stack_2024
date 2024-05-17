@@ -73,17 +73,34 @@ function printdata(pizzas){
 function addToCart(){
   const value = this.getAttribute("pizzaId");
   console.log(value);
-  ORDERSERVICES.addToCart(value);
+ ORDERSERVICES.addToCart(value);
   // alert("yess")
   printOrders();
 }
 
 function printOrders(){
+ const orderList = ORDERSERVICES.getOrders();
+// <li>
+//               <div class="pizza Name">Pepperoni</div>
+//               <div class="pizza price">$12.99</div>
+//               <div class="pizza count">2</div>
+//             </li>
 
+   const ul  = document.getElementById("orderList");
+   ul.innerHTML = ""
+   orderList.forEach((order)=>{
+    const li = document.createElement("li");
 
-   document.getElementById("orderCount").innerText = ORDERSERVICES.getTotalOrders();
-   console.log(ORDERSERVICES.getTotalBill());
-   document.getElementById("totalBill").innerText = ORDERSERVICES.getTotalBill();
+ li.innerHTML = `<div class="pizza Name">${order.name}</div>
+                <div class="pizza price">${order.price}</div>
+               <div class="pizza count">${order.count}</div>`
+
+      ul.appendChild(li)
+   })
+
+document.getElementById("orderCount").innerText = ORDERSERVICES.getTotalOrders();
+console.log(ORDERSERVICES.getTotalBill());
+document.getElementById("totalBill").innerText = ORDERSERVICES.getTotalBill();
 
 
 }
