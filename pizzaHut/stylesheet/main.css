@@ -100,3 +100,7 @@ button:hover {
   transform: scale(1.111);
   transition: 1.2s;
 }
+
+.orderCount {
+  margin: 0 10px;
+}

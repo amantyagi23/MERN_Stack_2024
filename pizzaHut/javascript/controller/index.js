@@ -91,9 +91,39 @@ function printOrders(){
    orderList.forEach((order)=>{
     const li = document.createElement("li");
 
- li.innerHTML = `<div class="pizza Name">${order.name}</div>
-                <div class="pizza price">${order.price}</div>
-               <div class="pizza count">${order.count}</div>`
+    let pizzaName = document.createElement("div");
+    pizzaName.innerText = order.name;
+    let pizzaPrice = document.createElement("div");
+    pizzaPrice.innerText = order.price
+    let pizzaCount = document.createElement("div");
+    let orderCount = document.createElement("span");
+    orderCount.innerText = order.count
+    orderCount.classList.add("orderCount")
+    let incBtn = document.createElement("button"); 
+
+    incBtn.setAttribute("orderId",order.orderId);
+    incBtn.innerText = "+"
+    incBtn.value = "+"
+    let decBtn = document.createElement("button"); 
+    decBtn.setAttribute("orderId",order.orderId);
+    decBtn.innerText = "-"
+    decBtn.value = "-"
+    incBtn.addEventListener("click",updateOrderCount);
+    decBtn.addEventListener("click",updateOrderCount);
+
+    pizzaCount.appendChild(incBtn);
+    pizzaCount.appendChild(orderCount);
+    pizzaCount.appendChild(decBtn);
+
+    li.appendChild(pizzaName);
+    li.appendChild(pizzaPrice);
+    li.appendChild(pizzaCount);
+
+//  li.innerHTML = `<div class="pizza Name">${order.name}</div>
+//                 <div class="pizza price">${order.price}</div>
+//                <div class="pizza count">
+//                <button>+</button><span class="orderCount">${order.count}</span><button>-</button></div>
+//                `
 
       ul.appendChild(li)
    })
@@ -105,3 +135,11 @@ document.getElementById("totalBill").innerText = ORDERSERVICES.getTotalBill();
 
 }
 
+
+function updateOrderCount(){
+  const orderId = this.getAttribute("orderId");
+  const value = this.value;
+  console.log(orderId,value);
+  ORDERSERVICES.incDecCount(orderId,value);
+  printOrders();
+}

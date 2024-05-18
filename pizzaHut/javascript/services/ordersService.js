@@ -4,10 +4,11 @@ import PIZZASERVICE from "./pizzaService.js";
 const ORDERSERVICES = {
     orderList:[], //database
     totalBill:0,
+    count :0,
     addToCart(pizzaId){
         const pizza =  PIZZASERVICE.serachPizza(pizzaId);
        
-
+      
         let order =  this.orderList.find((order)=>order.pizzaId == pizzaId);
 
         if(order!=null){
@@ -15,7 +16,8 @@ const ORDERSERVICES = {
             this.totalBill = this.totalBill + this.makeBill(pizza.price);
         }
         else{
-            let orderObj = new Order(1,pizza.id,"Aman ",1);
+            let orderObj = new Order(this.count,1,pizza.id,"Aman ",1);
+            this.count = this.count + 1;
             this.totalBill = this.totalBill + this.makeBill(pizza.price);
             this.orderList.push(orderObj);
         }
@@ -30,6 +32,7 @@ const ORDERSERVICES = {
             console.log(order);
             let pizza = PIZZASERVICE.serachPizza(order.pizzaId);
             let pizzaDetails = {
+                orderId : order.orderId,
                 name:pizza.name,
                 price :pizza.price,
                 count : order.count
@@ -38,6 +41,16 @@ const ORDERSERVICES = {
         })
 
         return orders;
+    },
+    incDecCount(orderId,value){
+        let order = this.orderList.find((order)=>order.orderId==orderId);
+
+        if(value == "+"){
+            order.count = order.count + 1;
+        }
+      else if(value == "-"){
+        order.count = order.count - 1
+        }
     },
     getTotalOrders(){
         let count = 0;
