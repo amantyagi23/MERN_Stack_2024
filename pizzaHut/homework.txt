@@ -1,0 +1,24 @@
+
+
+pizza service
+
+increment
+decrement
+
+error 1
+
+total pricing
+
+
+place order btn view (bill);
+
+user 
+
+login
+navbar -> name
+register 
+
+check (validation)
+
+email unique
+
