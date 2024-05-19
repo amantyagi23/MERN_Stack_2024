@@ -1,7 +1,12 @@
 import User from "../model/user.js"
 
 const USERSERVICES={
-    userList:[],
+    userList:[{
+        userId:98,
+        username:"Aman Tyagi",
+        email:"aman@gmail.com",
+        password:"123456"
+    }],
     isLogined:false,
     uid:0,
     register(username,email,password){
@@ -11,8 +16,20 @@ const USERSERVICES={
         return true;
     },
     login(email,password){
+        console.log(email,password);
+
+
+        const userObj = this.userList.find((user)=>user.email == email);
+
+        if(userObj != undefined ){
+            if(userObj.password == password){
+                this.isLogined = true
+                return true
+            }
+            return false
+        }
+        return false
         
-        this.isLogined = true
     },
     logout(){
         this.isLogined = false

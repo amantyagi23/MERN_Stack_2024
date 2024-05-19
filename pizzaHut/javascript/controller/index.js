@@ -6,7 +6,13 @@ window.addEventListener("DOMContentLoaded",bindEvents);
 
 function bindEvents(){
     getPizzaData();
+    changeHeader();
 }
+
+function changeHeader(){
+  
+}
+
 
 async function getPizzaData(){
     const pizzaList = await PIZZASERVICE.getData();
