@@ -18,7 +18,7 @@ const USERSERVICES={
     login(email,password){
         console.log(email,password);
 
-
+        console.log(this.userList);
         const userObj = this.userList.find((user)=>user.email == email);
 
         if(userObj != undefined ){
