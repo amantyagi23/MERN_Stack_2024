@@ -5,6 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script type="module" src="javascript/controller/movieDetail.js"></script>
+    <link rel="stylesheet" href="stylesheet/main.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="netflix-header">
+      <div class="links">
+        <div class="logo">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+            alt="Netflix Logo"
+          />
+        </div>
+        <nav class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">TV Shows</a>
+          <a href="#">Movies</a>
+          <a href="#">New & Popular</a>
+          <a href="#">My List</a>
+        </nav>
+      </div>
+
+      <div class="flex">
+        <div class="search-container">
+          <form action="/netflix-clone/search.html" method="get">
+            <input
+              type="text"
+              placeholder="Search"
+              name="q"
+              class="search-input"
+              id="search"
+            />
+            <button class="search-button" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="nav-links">
+          <a href="#"> Login </a>
+          <a href="#"> Sign Up </a>
+        </div>
+        <!-- <div class="profile">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            alt="User Profile"
+          />
+          <div class="dropdown">
+            <ul>
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Sign out of Netflix</a></li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </header>
+
+    <main id="main"></main>
+  </body>
 </html>

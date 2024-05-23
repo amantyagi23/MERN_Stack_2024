@@ -1,20 +1,28 @@
 import MOVIESERVICE from "../services/movieService.js";
 
-window.addEventListener("DOMContentLoaded",events);
+window.addEventListener("DOMContentLoaded",event)
 
-function events(){
-    getMovies("popular");
-    getMovies("upcoming");
-    getMovies("top_rated");
+function event(){
+    getQueryParams()
 }
 
-async function getMovies(type){
-   const movies =  await MOVIESERVICE.getMovieList(type);
-   showMovies(movies,type)
+function getQueryParams(){
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const search = urlParams.get("q");
+   getMovieList(search);
 }
 
-function showMovies(movies,type){
-    const movieList = document.getElementById(type)
+async function getMovieList(search){
+    const movieList = await MOVIESERVICE.getMovieBySearch(search);
+    showMovies(movieList)
+}
+
+
+
+function showMovies(movies){
+    const movieList = document.getElementById("movieList")
     movies.forEach(movie => {
         const card = document.createElement("div")
         card.classList.add("card")
