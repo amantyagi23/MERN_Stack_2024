@@ -20,9 +20,14 @@
           <a href="#">Home</a>
           <a href="#">TV Shows</a>
           <a href="#">Movies</a>
-          <a href="#">New & Popular</a>
+          <a href="/netflix-clone/index.html?type=popular">New & Popular</a>
           <a href="#">My List</a>
         </nav>
+
+        <div class="profile">
+          <button>Genres</button>
+          <div id="genere" class="dropdown"></div>
+        </div>
       </div>
 
       <div class="flex">
@@ -32,10 +37,13 @@
               type="text"
               placeholder="Search"
               name="q"
+              id="search"
               class="search-input"
             />
             <button class="search-button">Search</button>
           </form>
+
+          <div class="searchData" id="searchData"></div>
         </div>
         <div class="nav-links">
           <a href="#"> Login </a>

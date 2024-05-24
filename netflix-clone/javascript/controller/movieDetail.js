@@ -17,12 +17,15 @@ function getMovieId(){
  async function movieDetail(movieId){
    
     const movie = await MOVIESERVICE.getMovieDetail(movieId);
+    const videoData = await MOVIESERVICE.getMovieTrailer(movieId);
+
 
     console.log(movie);
-    showMovie(movie);
+    showMovie(movie,videoData);
 }
 
-function showMovie(movie){
+function showMovie(movie,videoData){
+    console.log(videoData);
     const main = document.getElementById("main");
 
     const backImage = document.createElement("img");
@@ -33,7 +36,10 @@ function showMovie(movie){
     const title = document.createElement("h1")
     title.textContent = movie.original_title
 
+    const div = document.createElement("div")
+    div.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${videoData.key}" title="${videoData.name}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
     
     main.appendChild(backImage)
     main.appendChild(title);
+    main.appendChild(div)
 }

@@ -123,7 +123,7 @@ img {
 .dropdown ul li a {
   display: block;
   padding: 10px 20px;
-  color: #fff;
+  color: #746f6f;
   text-decoration: none;
   font-size: 14px;
 }
@@ -153,4 +153,23 @@ img {
 .container {
   width: 90%;
   margin: 40px auto;
+}
+
+.search-container {
+  position: relative;
+}
+
+.searchData {
+  width: 260px;
+  background-color: #2b2b2b;
+  position: absolute;
+  top: 110%;
+}
+
+.movie_box {
+  border: 1px solid rgb(152, 152, 152);
+  height: 20%;
+  margin: 10px auto;
+  padding: 5px 0;
+  color: rgb(202, 202, 202);
 }

@@ -11,7 +11,24 @@ function getQueryParams(){
     const urlParams = new URLSearchParams(queryString);
 
     const search = urlParams.get("q");
-   getMovieList(search);
+    const type = urlParams.get("type");
+    const genre = urlParams.get("genre");
+
+    console.log(search,type,genre);
+   if(search!==null){
+    getMovieList(search);
+   }
+   if(type!==null){
+    getMovieByType(type)
+   }
+   if(genre!==null){
+    getMovieList(genre)
+   }
+}
+
+async function getMovieByType(type){
+    const movieList = await MOVIESERVICE.getMovieList(type);
+    showMovies(movieList)
 }
 
 async function getMovieList(search){
@@ -23,6 +40,8 @@ async function getMovieList(search){
 
 function showMovies(movies){
     const movieList = document.getElementById("movieList")
+
+    movies.length > 0 ?
     movies.forEach(movie => {
         const card = document.createElement("div")
         card.classList.add("card")
@@ -36,7 +55,7 @@ function showMovies(movies){
         card.appendChild(image);
 
         movieList.appendChild(card);
-    });
+    }): movieList.innerHTML = `<h1> No Movie Found </h1>`
 }
 
 function showDetails(){
