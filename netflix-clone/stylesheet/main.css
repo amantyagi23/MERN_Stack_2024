@@ -173,3 +173,18 @@ img {
   padding: 5px 0;
   color: rgb(202, 202, 202);
 }
+
+#pagination {
+  margin: 0 auto;
+  width: 50%;
+}
+
+#pagination a {
+  margin: 0 5px;
+  font-size: 2em;
+  color: white;
+}
+
+#pagination a.highlight {
+  color: red !important;
+}

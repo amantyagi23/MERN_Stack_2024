@@ -30,8 +30,8 @@ function showGeneres(generes){
 }
 
 async function getMovies(type){
-   const movies =  await MOVIESERVICE.getMovieList(type);
-   showMovies(movies,type)
+   const movies =  await MOVIESERVICE.getMovieList(type,1);
+   showMovies(movies.movies,type)
 }
 
 function showMovies(movies,type){
@@ -62,11 +62,11 @@ function showDetails(){
 async function debounce(){
     console.log(this.value);
 
-    const data  = await MOVIESERVICE.getMovieBySearch(this.value);
+    const data  = await MOVIESERVICE.getMovieBySearch(this.value,1);
     console.log(data);
     const searchData = document.getElementById("searchData")
     searchData.innerHTML = ""
-    data.forEach((movie)=>{
+    data.movies.forEach((movie)=>{
         const div = document.createElement("div");
         div.innerText = movie.title
         searchData.appendChild(div)
