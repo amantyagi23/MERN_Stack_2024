@@ -32,7 +32,7 @@ function showMovie(movie,videoData){
 
     backImage.src = `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`
 
-    backImage.classList.add("backDropImage")
+    // backImage.classList.add("backDropImage")
     const title = document.createElement("h1")
     title.textContent = movie.original_title
 

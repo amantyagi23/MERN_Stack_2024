@@ -7,7 +7,42 @@ function events(){
     getMovies("upcoming");
     getMovies("top_rated");
     getGeneres();
+    isUserLoggedInOrNot();
+    document.getElementById("logout").addEventListener("click",logout)
     document.getElementById("search").addEventListener("input",debounce)
+}
+
+function isUserLoggedInOrNot(){
+    const value  = localStorage.getItem("isAuth");
+    console.log(value);
+    const profileSection = document.getElementById("profileSection");
+
+    if(value == 'true'){
+        profileSection.innerHTML = `
+       <div class="profile">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+          alt="User Profile"
+        />
+        <div class="dropdown">
+          <ul>
+            <li><a href="#">Account</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><button id="logout">Sign out of Netflix</button></li>
+          </ul>
+        </div>
+      </div>`
+    }else{
+        profileSection.innerHTML = `<div class="nav-links">
+        <a href="/netflix-clone/login.html"> Login </a>
+        <a href="/netflix-clone/signup.html"> Sign Up </a>
+      </div>`
+    }
+}
+
+function logout(){
+    localStorage.clear();
+    window.location.reload()
 }
 
 async function getGeneres(){

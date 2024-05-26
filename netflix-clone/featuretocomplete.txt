@@ -1,0 +1,14 @@
+
+
+create feature for mylist
+
+use firebase -firestoredatabase
+
+step 1 user logged or not if not redirect login page
+
+step 2 store in local storage uid email,accesstoken
+
+step 3 when user click on add to mylist button 
+then save data to database
+
+step 4 when user click on my list then get data from database using uid of user
